@@ -222,6 +222,7 @@ OTP:&nbsp;<?= $_SESSION['otp']."<br>" ?>
 <hr>
 <h3><u>Buy Package</u></h3>
 PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="pkgid" onchange="if (this.value=='1'){this.form['pkgidman'].style.visibility='visible'}else {this.form['pkgidman'].style.visibility='hidden'};" style="width: 50%;">
+  <option value="00016030">Maxtream 10gb 10k</option>
   <option value="00009382">OMG! 1GB 2hari Rp 10</option>
   <option value="00007333">OMG! 30gb 30k</option>
   <option value="00016038">OMG! 5gb 10k</option>
