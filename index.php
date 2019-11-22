@@ -173,7 +173,7 @@ GET OTP
 <div class="wrap-contact100">
 <form class="contact100-form validate-form" method="POST">
 <span class="contact100-form-title">
-Dor Tsel TPP
+Tembak Telkomsel OMG
 </span>
     <center>
 </label>
