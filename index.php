@@ -187,10 +187,6 @@ Dor Tsel TPP
 <input type="radio" checked="checked" name="tipe" value="vmp-preprod.telkomsel.com">
 <span class="checkmark"></span>
 </label>
-<label class="radio-container">VMP
-<input type="radio" name="tipe" value="vmp.telkomsel.com">
-<span class="checkmark"></span>
-</label>
         </center>
 <!-- <input type="radio" name="tipe" value="vmp-preprod.telkomsel.com" checked> VMP Prepod&nbsp;&nbsp;<input type="radio" name="tipe" value="vmp.telkomsel.com"> VMP<br> -->
 <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
