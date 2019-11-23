@@ -75,27 +75,7 @@ class MyTsel{
         curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch1, CURLOPT_POSTFIELDS, $body);
         $out = curl_exec($ch1);
-
-        $ip = file_get_contents('https://api.ipify.org');
-        $ch2 = curl_init();
-        $header1 = array(
-            'accept : application/json',
-            "x-forwarded-for: $ip",
-            'authorization: Bearer [object Object]',
-            'transactionid: A901190719192442969383440',
-            'channelid: VMP',
-            'Connection: keep-alive',
-            'Accept-Encoding: gzip',
-            'User-Agent: Mozilla/5.0 (Linux; U; Android 4.4; xx-xx; SM-J110F Build/KTU84P) AppleWebKit/537.16 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.16 Chrome/33.0.0.0',
-            'X-NewRelic-ID: VQ8GVFVVChAEUlJRBAcOUQ==');
-            
-        curl_setopt($ch2, CURLOPT_URL, 'https://vmp.telkomsel.com/api/sys/forwardIp');
-        curl_setopt($ch2, CURLOPT_HTTPHEADER, $header1);
-        curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch2, CURLOPT_COOKIEJAR, 'cookie.txt');
-        curl_setopt($ch2, CURLOPT_COOKIEFILE, 'cookie.txt');
-        $hasil = curl_exec($ch2);
-        if(strlen($hasil) > 0)
+        if(strlen($out) > 0)
             return "SUKSES";
         else
             return NULL;
