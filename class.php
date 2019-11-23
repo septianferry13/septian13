@@ -38,48 +38,27 @@ class MyTsel{
     
     public function get_otp($Msisdn) {
         
-        // $ch0 = curl_init();
-        // curl_setopt_array($ch0, array(
-        //     CURLOPT_URL => "https://tdwidm.telkomsel.com/passwordless/start",
-        //     CURLOPT_CUSTOMREQUEST => "POST",
-        //     CURLOPT_HTTPHEADER => array(
-        //         'Accept: application/json', 
-        //         'Content-Type: application/x-www-form-urlencoded; charset=utf-8',
-        //         'Accept-Encoding: gzip, deflate, br',
-        //         'X-NewRelic-ID: VQ8GVFVVChAEUlJRBAcOUQ==',
-        //         'content-length: 87',
-        //         'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
-        //     ),
-        //     CURLOPT_RETURNTRANSFER => 1
-        // ));
-        // curl_exec($ch0);
-        // curl_close($ch0);
-        
-        
-        $bahan = 'client_id=9yUwRUZirC0DXZyjMeQF4zCr6KO2R0Ub&connection=sms&phone_number=%2B';
-        $body = "$bahan$Msisdn";
-        $header = array(
-            'Accept: application/json', 
-            'Content-Type: application/x-www-form-urlencoded; charset=utf-8',
-            'Accept-Encoding: gzip, deflate, br', 'X-NewRelic-ID: VQ8GVFVVChAEUlJRBAcOUQ==',
-            'content-length: 87',
-            'User-Agent: Mozilla/5.0 (Linux; U; Android 4.4; xx-xx; SM-J110F Build/KTU84P) AppleWebKit/537.16 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.16 Chrome/33.0.0.0'
-        );
+        $bahan = 'connection=sms&phone_number=%2B';
+	$body = "$bahan$Msisdn";
+	$ctl = strlen($body);
+	$header = array(
+		'Accept: application/json', 
+		'Content-Type: application/x-www-form-urlencoded; charset=utf-8',
+		'Accept-Encoding: gzip, deflate, br', 'X-NewRelic-ID: VQ8GVFVVChAEUlJRBAcOUQ==',
+		'content-length: ' . $ctl,
+		'User-Agent: Mozilla/5.0 (Linux; U; Android 4.4; xx-xx; SM-J110F Build/KTU84P) AppleWebKit/537.16 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.16 Chrome/33.0.0.0'
+	);
 
-        $ch1 = curl_init();
-        curl_setopt($ch1, CURLOPT_URL, "https://tdwidm.telkomsel.com/passwordless/start");
-        curl_setopt($ch1, CURLOPT_HTTPHEADER, $header);
-        curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch1, CURLOPT_COOKIEJAR, 'cookie.txt');
-        curl_setopt($ch1, CURLOPT_COOKIEFILE, 'cookie.txt');
-        curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch1, CURLOPT_POSTFIELDS, $body);
-        $out = curl_exec($ch1);
-        if(strlen($out) > 0)
-            return "SUKSES";
-        else
-            return NULL;
-    }
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, "https://tdwidm.telkomsel.com/passwordless/start");
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
+	curl_setopt($ch, CURLOPT_COOKIEFILE, 'cookie.txt');
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+	$hasil = curl_exec($ch);
+}
     
     public function login($Msisdn, $otp, $tipe) {
  
