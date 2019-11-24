@@ -234,6 +234,8 @@ PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select n
 </select><br>
 PKGID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pkgidman"  style="width: 50%; visibility:hidden;"></input><br>
 TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value="A301180826192021277131740"></input><br>
+    <button class="btn btn-primary" name="do" value="BUY_PKG" type="submit">Buy</button>
+    <button class="btn btn-danger" type="submit" name="do" value="LOGOUT">Logout</button>
 <input type="submit" name="do" value="BUY_PKG"></input><br><br>
 <?php if(!empty($ress)) echo $ress ?>
 <hr>
