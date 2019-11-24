@@ -218,7 +218,6 @@ Change
 Key:&nbsp;<?= $_SESSION['key']."<br>" ?>
 Msisdn:&nbsp;<?= $_SESSION['msisdn']."<br>" ?>
 OTP:&nbsp;<?= $_SESSION['otp']."<br>" ?>
-<input type="submit" name="do" value="LOGOUT"></input>
 <hr>
 <h3><u>Buy Package</u></h3>
 PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="pkgid" onchange="if (this.value=='1'){this.form['pkgidman'].style.visibility='visible'}else {this.form['pkgidman'].style.visibility='hidden'};" style="width: 50%;">
@@ -236,7 +235,6 @@ PKGID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value="A301180826192021277131740"></input><br>
     <button class="btn btn-primary" name="do" value="BUY_PKG" type="submit">Buy</button>
     <button class="btn btn-danger" type="submit" name="do" value="LOGOUT">Logout</button>
-<input type="submit" name="do" value="BUY_PKG"></input><br><br>
 <?php if(!empty($ress)) echo $ress ?>
 <hr>
 </fieldset>
