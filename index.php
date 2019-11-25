@@ -178,11 +178,11 @@ Tembak Telkomsel OMG VMP Methode
     <center>
 </label>
 <label class="radio-container m-r-45">VMP Prepod
-<input type="radio" checked="checked" name="tipe" value="vmp-preprod.telkomsel.com">
+<input type="radio" checked="checked" name="tipe" value="vmp-preprod-cms.telkomsel.com">
 <span class="checkmark"></span>
 </label>
         </center>
-<!-- <input type="radio" name="tipe" value="vmp-preprod.telkomsel.com" checked> VMP Prepod&nbsp;&nbsp;<input type="radio" name="tipe" value="vmp.telkomsel.com"> VMP<br> -->
+<!-- <input type="radio" name="tipe" value="vmp-preprod-cms.telkomsel.com" checked> VMP Prepod&nbsp;&nbsp;<input type="radio" name="tipe" value="vmp.telkomsel.com"> VMP<br> -->
 <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
 <input class="input100" type="text" value="<?= $_SESSION['msisdn']; ?>" name="phone" disabled>
 <span class="focus-input100"></span>
