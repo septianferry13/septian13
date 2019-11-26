@@ -140,6 +140,11 @@ session_start(); #list: key, msisdn, otp, secret_token
 <!-- ################################ 1 ################################ -->
 <?php if (!isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
+<style>
+			body{
+				background-color:rgb(81, 11, 245);
+			}
+		</style>
 <div class="container-contact100">
 <div class="wrap-contact100">
 <form class="contact100-form validate-form" method="POST">
