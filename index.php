@@ -213,6 +213,11 @@ Change
 <!-- ################################ 3 ################################ -->
 <?php }else if (isset($_SESSION['msisdn']) and isset($_SESSION['otp']) and isset($_SESSION['tipe']) and isset($_SESSION['secret_token'])){ ?>
 <body>
+<style>
+			body{
+				background-color:rgb(81, 11, 245);
+			}
+		</style>
 <form method="POST">
 <fieldset>
 Key:&nbsp;<?= $_SESSION['key']."<br>" ?>
