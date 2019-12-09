@@ -166,20 +166,16 @@ GET OTP
 <!-- <input type="submit" name="do" value="GETOTP"></input> -->
 <?php if(!empty($err)) echo $err ?> 
 <!--     </pre> -->
-</form>
-</div>
-<body>
+   <center>
     <div class="container">
-        <article>
             jumlah pengguna hari ini
             <?php 
             include ("counter.php");
             echo "<p style='color:red; font-weight: bold;'> $kunjungan[0] </p>";
             ?>
             user
-        </article>
-    </div>
-</body>
+</form>
+</div>
 </div>
 </body>
 
