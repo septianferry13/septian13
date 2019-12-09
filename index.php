@@ -149,22 +149,6 @@ session_start(); #list: key, msisdn, otp, secret_token
 <div class="wrap-contact100">
 <form class="contact100-form validate-form" method="POST">
 <span class="contact100-form-title">
-<body>
-    <div class="container">
-        <header>
-            <h1>Selamat Datang</h1>
-        </header>
-
-        <article>
-            website ini telah dikunjungi
-            <?php 
-            include ("counter.php");
-            echo "<p style='color:red; font-weight: bold;'> $kunjungan[0] </p>";
-            ?>
-            kali
-        </article>
-    </div>
-</body>
 Tembak Telkomsel OMG VMP Prepod Methode
 </span>
 <!--     <form method="POST">
@@ -184,6 +168,18 @@ GET OTP
 <!--     </pre> -->
 </form>
 </div>
+<body>
+    <div class="container">
+        <article>
+            jumlah pengguna hari ini
+            <?php 
+            include ("counter.php");
+            echo "<p style='color:red; font-weight: bold;'> $kunjungan[0] </p>";
+            ?>
+            user
+        </article>
+    </div>
+</body>
 </div>
 </body>
 
