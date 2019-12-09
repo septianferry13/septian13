@@ -139,34 +139,56 @@ session_start(); #list: key, msisdn, otp, secret_token
 
 <!-- ################################ 1 ################################ -->
 <?php
-   session_start();
-
-   //to reset the saved countdown
-   if (!empty($_REQUEST['resetCountdown']))
-   {
-       unset($_SESSION['startTime']);
-   }
-
-   if (empty($_SESSION['startTime']))
-   {
-       $_SESSION['startTime'] = time();
-   }
-
-   //In seconds
-   $startTime = time() - $_SESSION['startTime'];
+session_start();
+if(isset($_SESSION["waktu_start"])){
+	$lewat = time() - $_SESSION["waktu_start"];
+	}else{
+		$_SESSION["waktu_start"] = time();
+		$lewat = 0;
+	}
 ?>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.plugin.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<div id="timer_place">
+	<span id="timer">00 : 00 : 00</span>
+</div>
 <script type="text/javascript">
-var countdown = 60; //in seconds
-var startTime = <?php echo $startTime; ?>;
-
-startCountdown(startTime, countdown);
-
-function startCountdown(startFrom, duration)
-{
-   //countdown implementation
-}
+	function waktuHabis(){
+		alert('Waktu Anda telah habis, Terima kasih sudah berkunjung.');
+		var frmSoal = document.getElementById("frmSoal"); 
+		frmSoal.submit(); 
+	}
+	function hampirHabis(periods){
+		if($.countdown.periodsToSeconds(periods) == 60){
+			$(this).css({color:"red"});
+		}
+	}
+	$(function(){
+		var waktu = 180; 
+		var sisa_waktu = waktu - <?php echo $lewat ?>;
+		var longWayOff = sisa_waktu;
+		$("#timer").countdown({
+			until: longWayOff,
+			compact:true,
+			onExpiry:waktuHabis,
+			onTick: hampirHabis
+		});
+	})
 </script>
-<?php echo $startTime; ?>
+<style>
+	#timer_place{
+		margin:0 auto;
+		text-align:center;
+	}
+	#timer{
+		border-radius:7px;
+		border:2px solid gray;
+		padding:7px;
+		font-size:2em;
+		font-weight:bolder;
+	}
+</style>
 
 <?php if (!isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
