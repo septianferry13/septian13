@@ -1,5 +1,11 @@
 <?php
 session_start(); #list: key, msisdn, otp, secret_token
+if(isset($_SESSION["mulai_waktu"])){
+ $waktu = 60;
+ }
+else {
+ $waktu = 0;
+ }  
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -17,13 +23,6 @@ session_start(); #list: key, msisdn, otp, secret_token
     <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/css/util.css">
     <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/css/main.css">
 </head>
-if(isset($_SESSION["mulai_waktu"])){
- $waktu = 60;
- }
-else {
- $waktu = 0;
- }  
-?>
 <?php
     date_default_timezone_set('Asia/Jakarta');
     
