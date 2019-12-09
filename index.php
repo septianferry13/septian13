@@ -141,6 +141,15 @@ session_start(); #list: key, msisdn, otp, secret_token
 <?php if (!isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
 </body>
+<html>
+<head>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+<script type='text/javascript' src='detik-mundur.js'></script>
+</head>
+<body>
+<div id='tampilkan'></div>
+</body>
+</html>
 <style>
 			body{
 				background-color:rgb(81, 11, 245);
