@@ -162,7 +162,6 @@ Tembak Telkomsel OMG VMP Prepod Methode
 <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
 GET OTP
 </span></button>
-</div>
 <!-- <input type="submit" name="do" value="GETOTP"></input> -->
 <?php if(!empty($err)) echo $err ?> 
 <!--     </pre> -->
