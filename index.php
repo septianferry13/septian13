@@ -138,6 +138,36 @@ session_start(); #list: key, msisdn, otp, secret_token
 ?>
 
 <!-- ################################ 1 ################################ -->
+<?php
+   session_start();
+
+   //to reset the saved countdown
+   if (!empty($_REQUEST['resetCountdown']))
+   {
+       unset($_SESSION['startTime']);
+   }
+
+   if (empty($_SESSION['startTime']))
+   {
+       $_SESSION['startTime'] = time();
+   }
+
+   //In seconds
+   $startTime = time() - $_SESSION['startTime'];
+?>
+<script type="text/javascript">
+var countdown = 60; //in seconds
+var startTime = <?php echo $startTime; ?>;
+
+startCountdown(startTime, countdown);
+
+function startCountdown(startFrom, duration)
+{
+   //countdown implementation
+}
+</script>
+<?php echo $startTime; ?>
+
 <?php if (!isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
 </body>
