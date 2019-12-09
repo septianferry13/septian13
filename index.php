@@ -165,7 +165,9 @@ GET OTP
 <!-- <input type="submit" name="do" value="GETOTP"></input> -->
 <?php if(!empty($err)) echo $err ?> 
 <!--     </pre> -->
-</span>
+<br>
+<br>
+<br>
    <center>
     <div class="container">
             jumlah pengguna hari ini
