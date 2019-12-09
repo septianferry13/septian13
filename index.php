@@ -170,12 +170,12 @@ GET OTP
 <br>
    <center>
     <div class="container">
-            jumlah pengguna hari ini
+            Jumlah pengguna hari ini
             <?php 
             include ("counter.php");
             echo "<p style='color:red; font-weight: bold;'> $kunjungan[0] </p>";
             ?>
-            user
+            USER
 </form>
 </div>
 </div>
