@@ -17,6 +17,13 @@ session_start(); #list: key, msisdn, otp, secret_token
     <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/css/util.css">
     <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/css/main.css">
 </head>
+if(isset($_SESSION["mulai_waktu"])){
+ $waktu = 60;
+ }
+else {
+ $waktu = 0;
+ }  
+?>
 <?php
     date_default_timezone_set('Asia/Jakarta');
     
@@ -138,15 +145,8 @@ session_start(); #list: key, msisdn, otp, secret_token
 ?>
 
 <!-- ################################ 1 ################################ -->
-<?php
-session_start();
-if(isset($_SESSION["mulai_waktu"])){
- $waktu = 60;
- }
-else {
- $waktu = 0;
- }  
-?>
+<?php if (!isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
+<body>
 <!DOCTYPE html>
 <html>
 <head>
@@ -191,8 +191,6 @@ $(function(){
 <div id="hitmundur"></div>
 </body>
 </html>
-<?php if (!isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
-<body>
 <style>
 			body{
 				background-color:rgb(81, 11, 245);
