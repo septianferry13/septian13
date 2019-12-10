@@ -21,7 +21,7 @@ session_start(); #list: key, msisdn, otp, secret_token
     date_default_timezone_set('Asia/Jakarta');
     
     require_once('config.php');
-    //require('class.php');
+    require('class.php');
     
     $err    = NULL;
     $ress   = NULL;
@@ -95,8 +95,6 @@ session_start(); #list: key, msisdn, otp, secret_token
                 
                 
                 if (strlen($login) > 0){
-
-                    $secret_token               = trim(preg_replace('/\s+/', ' ', $login));
                     $_SESSION['otp']            = $otp;
                     $_SESSION['secret_token']   = $secret_token;
                     $_SESSION['tipe']           = $tipe;
