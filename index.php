@@ -147,6 +147,52 @@ if(isset($_SESSION["waktu_start"])){
 		$lewat = 0;
 	}
 ?>
+
+Inwepo
+Ad
+Esti Pinarsih in Tutorial Pemrograman
+Cara Membuat Visitor Counter Sederhana dengan PHP
+HomepageTutorial Pemrograman
+
+
+
+Salah satu widgets wajib yang biasa ditemukan pada sebuah website adalah visitor counter atau hit counter. Visitor counter atau hit counter berfungsi untuk menghitung pengunjung website. Dalam perkembangannya visitor counter atau hit counter dalam sebuah website tersedia dalam 2 jenis, yaitu visitor counter harian, dan visitor counter total. Visitor counter harian akan menghitung kunjungan perhari sedangkan visitor counter total akan menghitung keseluruhan kunjungan pada website.
+
+
+Tak perlu berlama-lama lagi, langsung saja kita bahas bagaimana caranya membuat visitor counter atau hit counter sederhana.
+
+1. Buka XAMPP Control Panel dan aktifkan Apache dan MySql.
+
+2. Buka text editor, seperti Notepad++, atau Dreamweaver dan ketiklah script code berikut.
+
+<html>
+<head>
+<title> Cara Membuat Visitor Counter Website di PHP</title>
+</head>
+<body>
+<FONT FACE="Comic Sans MS" size='6' color='brown'>Cara Membuat Visitor Counter Website di PHP</font></br></br></br>
+<?php
+$filename = 'counter.txt';
+ 
+function counter(){  
+ global $filename; 
+ 
+ if(file_exists($filename)){  
+  $value = file_get_contents($filename); 
+ }else{  
+  $value = 0;  
+ }
+ 
+ file_put_contents($filename, ++$value);  
+}
+ 
+counter(); 
+ 
+echo 'Total pengunjung: '.file_get_contents($filename); 
+?></br></br>
+<FONT FACE="Comic Sans MS" size='4' color='black'>Pengunjung Anda akan bertambah 1, ketika Anda me-refresh halaman.</font>
+</body>
+</html>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/jquery.plugin.min.js"></script>
 <script src="js/jquery.countdown.js"></script>
