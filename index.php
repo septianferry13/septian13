@@ -342,14 +342,14 @@ Tembak Telkomsel OMG VMP Methode
 </div>
 <div class="container-contact100-form-btn">
 <button class="contact100-form-btn" name="do" value="LOGIN" type="submit">
-<!-- <input type="submit" name="do" value="LOGIN"></input> -->
-<?php if(!empty($ress)) echo $ress ?>
-<!--     </pre> -->
 Login
 </span></button>&nbsp;&nbsp;
 <button class="contact100-form-btn" name="do" value="CHANGE" type="submit">
 Change
 </span></button>
+<!-- <input type="submit" name="do" value="GETOTP"></input> -->
+<?php if(!empty($err)) echo $err ?>
+<!--     </pre> -->
 </div>
     </form>
 </div>
