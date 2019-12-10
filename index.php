@@ -21,7 +21,7 @@ session_start(); #list: key, msisdn, otp, secret_token
     date_default_timezone_set('Asia/Jakarta');
     
     require_once('config.php');
-    require('class.php');
+    //require('class.php');
     
     $err    = NULL;
     $ress   = NULL;
