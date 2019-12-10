@@ -342,17 +342,15 @@ Tembak Telkomsel OMG VMP Methode
 </div>
 <div class="container-contact100-form-btn">
 <button class="contact100-form-btn" name="do" value="LOGIN" type="submit">
-    <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-Login
-</span></button>&nbsp;&nbsp;
-<button class="contact100-form-btn" name="do" value="CHANGE" type="submit">
-    <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-Change
-</span></button>
-</div>
 <!-- <input type="submit" name="do" value="LOGIN"></input> -->
 <?php if(!empty($err)) echo $err ?>
 <!--     </pre> -->
+Login
+</span></button>&nbsp;&nbsp;
+<button class="contact100-form-btn" name="do" value="CHANGE" type="submit">
+Change
+</span></button>
+</div>
     </form>
 </div>
 </div>
