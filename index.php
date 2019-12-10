@@ -276,6 +276,19 @@ GET OTP
 <body>
     <div id='timer'></div>
 </body>
+<body>
+<p> The download will begin in <span id="countdowntimer">10 </span> Seconds</p>
+
+<script type="text/javascript">
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+</script>
+</body>
 <br>
 <br>
 <br>
