@@ -91,7 +91,7 @@ session_start(); #list: key, msisdn, otp, secret_token
                 
                 //if ($key != privatekey){die("Error: wrong key");}
                 $tsel = new MyTsel();
-                $login = $tsel->login($msisdn, $otp, $tipe);
+                $tsel->login($msisdn, $otp, $tipe);
                 
                 
                 if (strlen($login) > 0){
